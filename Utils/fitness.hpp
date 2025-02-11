@@ -7,5 +7,5 @@ using namespace std;
 #include <iomanip>
 
 void displayMenu(); // defined function in the hpp file!
-    
+void calorieChecker(); //defined function in the hpp file!
 # endif
