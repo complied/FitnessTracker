@@ -13,7 +13,19 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-displayMenu(); //function calling in main - now works! 
+    displayMenu(); //function calling in main - now works!
+    int choice;
+    cin >> choice;
     
-
+    switch (choice) {
+        case 1: calorieChecker();
+            break;
+    }
+    
+    
+    
+    
+    
+    return 0;
 }
+
