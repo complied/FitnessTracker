@@ -8,7 +8,7 @@ void calorieChecker() {
     double weight, time, burnedCalories = 0;
     string workOuts;
     
-    while (true) {
+    while (true) { //put this in a while loop to let it loop untill done!
         cout << setfill(' ') << setw(10) << "" << setfill('=') << setw(40) << "" << endl;
         cout << setfill(' ') << setw(10) << "" << "[Running] - [Swimming] - [Biking]" << endl;
         cout << setfill(' ') << setw(10) << "" << "Choose one of the following: ";
@@ -25,7 +25,7 @@ void calorieChecker() {
     while (true) {
         cout << setfill(' ') << setw(10) << "" << "Please Enter Your Weight In Kgs: " << endl;
         cout << setfill(' ') << setw(10) << "" << setfill('-') << setw(5) << "" << "> ";
-        cin >> weight;
+        cin >> weight; // takes in weight input
         
         if (cin.fail() || weight <= 0) {
             cin.clear(); // Clears the error flags
@@ -42,9 +42,9 @@ void calorieChecker() {
         cout << setfill(' ') << setw(10) << "" << setfill('-') << setw(5) << "" << "> ";
         cin >> time;
         
-        if (cin.fail() || time <= 0) {
+        if (cin.fail() || time <= 0) { // another error checker!
             cin.clear(); // Clear error flag
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input - just how learned in class 
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input - just how learned in class
             cout << setfill(' ') << setw(10) << "" << "Invalid input. Please enter a valid duration." << endl;
         } else {
             break;
@@ -61,5 +61,5 @@ void calorieChecker() {
     
     cout << fixed << setprecision(2); // Format decimals
     cout << setfill(' ') << setw(10) << "" << "Your estimated calories burned are: " << endl;
-    cout << setfill(' ') << setw(10) << "" << setfill('-') << setw(5) << "" << "> " << burnedCalories << " KCal" << endl;
+    cout << setfill(' ') << setw(10) << "" << setfill('-') << setw(5) << "" << "> " << burnedCalories << " KCal" << endl; // Resends how much it is in decimals! 
 }
