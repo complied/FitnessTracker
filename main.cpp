@@ -8,7 +8,12 @@
 #include <iostream>
 using namespace std;
 #include <iomanip>
-#include "Utils/fitness.hpp"
+#include "Utils/DisplayMenu.hpp"
+#include "Utils/calorieChecker.hpp"
+#include "Utils/workoutReccomendation.hpp"
+#include "Utils/workoutLogger.hpp"
+
+// ****** Updated All these, Included every hpp function in main ******
 
 
 int main(int argc, const char * argv[]) {
@@ -19,6 +24,8 @@ int main(int argc, const char * argv[]) {
     
     switch (choice) {
         case 1: calorieChecker();
+            break;
+        case 2: workoutReccomendation(); //workout Recommendator function here now!!
             break;
     }
     
