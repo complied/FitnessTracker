@@ -70,7 +70,7 @@ v - 0.4 --
 
 ===================================================
 
-Youtube Video here ------ > 
+Youtube Video here ------ > https://www.youtube.com/watch?v=IcDLU2BOBRM
 
 ===================================================
 
@@ -81,3 +81,4 @@ https://www.geeksforgeeks.org/
 https://stackoverflow.com/
 https://cplusplus.com/doc/
 https://devdocs.io/cpp/
+https://www.instituteoflifestylemedicine.org/wp-content/uploads/2015/04/METValues.pdf [PDF link]
