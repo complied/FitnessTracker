@@ -39,8 +39,45 @@ v - 0.3 -
       + Moderate - 4-day workout plan  
       + Intermediate - 6-day workout plan  
 
+v - 0.4 -- 
 
++ Created A New Function! #WorkoutLogger! Uses the parameeters of string[], int[] 
++ Added a configuration for how many workouts you can log - In this case 15
+    + Uses arrays to store workout activities and durations 
++ Using If to check y for yes more & n for no more logging 
 
++ Security 
+    + Added std::numeric_limits<streamsize>::max() to clear input buffer and prevent skipping issues.
+        + Usuage of cin.ignore and getline to avoid invalid duration inputs
+
++ Updated Code for Workout Reccomendation! 
+    + Now the security bug got fixed
+    + Added a while-loop to ensure valid input selection before proceeding.
+        Users can no longer enter invalid options like and proceed.
+    +C learer formatting for invalid input messages.
+    + Prevents accidental exits due to incorrect input.
     
 
++ Updated Main! 
+    + Now added a loop in main where, Now It wont end Untill user presses Enter or return - Bascially White Space 
+    + Now Theres Another Switch statement added - 4 To exit! 
+    + Loops and Loops now! 
+    + added extra Cin command cin.get(); & cin.fail();
 
+
+
+
+
+===================================================
+
+Youtube Video here ------ > 
+
+===================================================
+
+
+Some Sources Used to complete this project! 
+
+https://www.geeksforgeeks.org/
+https://stackoverflow.com/
+https://cplusplus.com/doc/
+https://devdocs.io/cpp/
