@@ -17,21 +17,44 @@ using namespace std;
 
 
 int main(int argc, const char * argv[]) {
-    
-    displayMenu(); //function calling in main - now works!
     int choice;
-    cin >> choice;
+
+    while (true) { // Loop until the user chooses to exit
+        displayMenu(); // Function calling in main - now works!
+
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        // Input validation
+        if (cin.fail()) {
+            cin.clear();  // Clears the error flag
+            cin.ignore();  // Clears input buffer 
+            cout << "Invalid input! Please Re-Enter a number: ";
+            cin >> choice;
+        }
+
+        switch (choice) {
+            case 1:
+                calorieChecker();
+                break;
+            case 2:
+                workoutReccomendation(); // Workout Recommender function here now
+                break;
+            case 3:
+                logWorkout(activities, durations, workoutCount);
+                break;
+            case 4:
+                cout << "Exiting program. Thank you for using the fitness tracker!" << endl;
+                return 0;
+            default:
+                cout << "Invalid choice! Please enter a number between 1 and 4." << endl;
+        }
+
     
-    switch (choice) {
-        case 1: calorieChecker();
-            break;
-        case 2: workoutReccomendation(); //workout Recommendator function here now!!
-            break;
+        cout << setfill(' ') << setw(10) << ""<< "Please Press Enter to return to the main menu.";
+        cin.ignore(); // Clears input buffer
+        cin.get(); // Waits for Enter key - Waits for any characters with white spaces for examples enter or return!
     }
-    
-    
-    
-    
     
     return 0;
 }
