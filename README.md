@@ -24,5 +24,23 @@ v - 0.2 -
 + Outputs calculated calories burned in a formatted, user-friendly manner with two decimal precision.
 + Updated Menu function! - Better flexiblity
 
+v - 0.3 - 
+
++ Implemented New Features for #CalorieChecker!
+   + Used cin.fail(), cin.ignore(), and numeric_limits to improve input validation.  
+   + Ensures only valid inputs are accepted, preventing bugs and crashes.  
+
++Removed Fitness.cpp/Fitness.hpp files
+   + Organized all functions into their own .cpp and .hpp files for better structure and maintainability.  
+
++ New Function Added! #WorkoutRecommendation
+   + Recommends workouts based on different fitness levels:  
+      + Beginner- 3-day workout plan  
+      + Moderate - 4-day workout plan  
+      + Intermediate - 6-day workout plan  
+
+
+
+    
 
 
