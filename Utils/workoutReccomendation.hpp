@@ -7,8 +7,9 @@ using namespace std;
 #include <iomanip>
 #include <string>
 
+namespace workoutReccomendation{
 void workoutReccomendation(); // defined function in the hpp file!
-
+}
 # endif
 
 

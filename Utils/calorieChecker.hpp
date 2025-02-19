@@ -7,7 +7,9 @@ using namespace std;
 #include <iomanip>
 #include <string> 
 
-void calorieChecker(); // defined function in the hpp file!
-
+namespace calorieChecker
+{
+    void calorieChecker(); // defined function in the hpp file!
+}
 # endif
 

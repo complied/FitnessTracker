@@ -4,21 +4,22 @@ using namespace std;
 #include <iomanip>
 #include <string>
 
+namespace workoutReccomendation{
 void workoutReccomendation() {
     string workoutChoice;
-
+    
     // Display welcome message
     cout << setfill(' ') << setw(10) << "" << setfill('=') << setw(40) << "" << endl;
     cout << setfill(' ') << setw(10) << "" << "Welcome to the Workout Recommender" << endl;
     cout << setfill(' ') << setw(10) << "" << setfill('=') << setw(40) << "" << endl;
-
+    
     // Loop until valid input is provided
     while (true) {  // Keeps running until a valid choice is entered
         cout << setfill(' ') << setw(10) << "" << "[Beginner] - [Moderate] - [Intermediate]" << endl;
         cout << setfill(' ') << setw(10) << "" << "Choose one of the following: ";
         cin >> workoutChoice;
         cout << endl; // Extra line for spacing
-
+        
         // Check if the input is valid
         if (workoutChoice == "Beginner" || workoutChoice == "Moderate" || workoutChoice == "Intermediate") {
             break;  // use of break to exit the loop if the input is valid
@@ -34,7 +35,7 @@ void workoutReccomendation() {
     cout << endl; // Extra line for spacing
     cout << setfill(' ') << setw(10) << "" << "Your Workout Plan:" << endl;
     cout << setfill(' ') << setw(10) << "" << setfill('=') << setw(40) << "" << endl;
-
+    
     if (workoutChoice == "Beginner") {
         string beginnerWorkouts[3][5] = {
             {"Push Day", "Push-ups", "Bench Press", "Tricep Dips", "Overhead Press"},
@@ -84,4 +85,5 @@ void workoutReccomendation() {
             cout << setfill(' ') << setw(10) << "" << setfill('=') << setw(40) << "" << endl;
         }
     }
+}
 }
