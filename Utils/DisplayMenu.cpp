@@ -3,6 +3,7 @@ using namespace std;
 #include <iomanip>
 #include <string>
 
+namespace displayMenu {
 //created a displayMenu function that now shows us the basic menu output!
 void displayMenu() {
     cout << setfill(' ') << setw(10) << "" << setfill(' ') << setw(30) << "" << endl;
@@ -14,6 +15,6 @@ void displayMenu() {
     cout << setfill(' ') << setw(10) << ""<< "2) Workout Reccomendation." << endl;
     cout << setfill(' ') << setw(10) << ""<< "3) Logging workout." << endl;
     cout << setfill(' ') << setw(10) << "" << setfill('-') << setw(5) << "" <<"> ";
+    }
 }
-
-// Used Basic Iomanip Libarries to create this! 
+// Used Basic Iomanip Libarries to create this!
