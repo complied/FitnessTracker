@@ -6,6 +6,8 @@
 using namespace std;
 #include <iomanip>
 
+namespace displayMenu
+{
 void displayMenu(); // defined function in the hpp file!
-
+}
 # endif
