@@ -2,8 +2,9 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-using namespace std;
 
+using namespace std;
+namespace calorieChecker{
 void calorieChecker() {
     double weight, time, burnedCalories = 0;
     string workOuts;
@@ -61,5 +62,6 @@ void calorieChecker() {
     
     cout << fixed << setprecision(2); // Format decimals
     cout << setfill(' ') << setw(10) << "" << "Your estimated calories burned are: " << endl;
-    cout << setfill(' ') << setw(10) << "" << setfill('-') << setw(5) << "" << "> " << burnedCalories << " KCal" << endl; // Resends how much it is in decimals! 
+    cout << setfill(' ') << setw(10) << "" << setfill('-') << setw(5) << "" << "> " << burnedCalories << " KCal" << endl; // Resends how much it is in decimals!
+}
 }
