@@ -13,14 +13,14 @@ using namespace std;
 #include "Utils/workoutReccomendation.hpp"
 #include "Utils/workoutLogger.hpp"
 
-// ****** Updated All these, Included every hpp function in main ******
 
+// ****** Updated All these, Included every hpp function in main ******
 
 int main(int argc, const char * argv[]) {
     int choice;
 
     while (true) { // Loop until the user chooses to exit
-        displayMenu(); // Function calling in main - now works!
+        displayMenu::displayMenu(); // Function calling in main - now works!
 
         cout << "Enter your choice: ";
         cin >> choice;
@@ -35,13 +35,13 @@ int main(int argc, const char * argv[]) {
 
         switch (choice) {
             case 1:
-                calorieChecker();
+                calorieChecker::calorieChecker();
                 break;
             case 2:
-                workoutReccomendation(); // Workout Recommender function here now
+                workoutReccomendation::workoutReccomendation(); // Workout Recommender function here now
                 break;
             case 3:
-                logWorkout(activities, durations, workoutCount);
+                logWorkout::logWorkout(logWorkout::activities, logWorkout::durations, logWorkout::workoutCount);
                 break;
             case 4:
                 cout << "Exiting program. Thank you for using the fitness tracker!" << endl;
