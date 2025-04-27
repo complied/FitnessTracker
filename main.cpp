@@ -12,6 +12,8 @@ using namespace std;
 #include "Utils/calorieChecker.hpp"
 #include "Utils/workoutReccomendation.hpp"
 #include "Utils/workoutLogger.hpp"
+#include "Utils/workoutAssign.hpp"
+
 
 
 // ****** Updated All these, Included every hpp function in main ******
@@ -44,10 +46,12 @@ int main(int argc, const char * argv[]) {
                 logWorkout::logWorkout(logWorkout::activities, logWorkout::durations, logWorkout::workoutCount);
                 break;
             case 4:
+                workoutManager::assignWorkoutToDay(logWorkout::activities, logWorkout::durations, logWorkout::workoutCount); // connected both - logged workout to workout manager
+            case 5:
                 cout << "Exiting program. Thank you for using the fitness tracker!" << endl;
                 return 0;
             default:
-                cout << "Invalid choice! Please enter a number between 1 and 4." << endl;
+                cout << "Invalid choice! Please enter a number between 1 and 5." << endl;
         }
 
     
