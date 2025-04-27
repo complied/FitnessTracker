@@ -7,6 +7,7 @@ A simple C++ program that helps users log workouts, get workout recommendations,
 - Log workout type and duration  
 - Get basic workout recommendations  
 - Calculate total calories burned  
+- Workout Assign
 
 
 V - 0.1 - 
@@ -64,6 +65,12 @@ v - 0.4 --
     + Loops and Loops now! 
     + added extra Cin command cin.get(); & cin.fail();
 
+v - 0.5 -- 
+
++ Implemented AssignWorkoutDay function 
+    + - Connects with workoutLogger by accessing the existing global arrays (activities, durations, and workoutCount).
+        - Passes these arrays as parameters into assignWorkoutToDay()
+    - Goes through the workouts, creates shared pointers, and assigns them to days inside a map<string, vector<shared_ptr<workout>>>.
 
 
 
