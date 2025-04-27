@@ -11,10 +11,15 @@ workout::workout(const string &t, double d) : type(t), duration(d) {} // workout
 void assignWorkoutToDay(string activities[], double durations[], int workoutCount) {
     for (int i = 0; i < workoutCount; i++) { // switching through each workout
         string day;
-        
+
         // assigning workout activity to selected day
         cout << "Please Enter a day you want to assign the workout: [ " << activities[i] << " ] ";
         cin >> day;
+        
+        if (workoutManager[day].size() >= 5) { // limiting maximym to 5 
+            cout << "Day is full! Cannot assign more workouts to " << day << ".\n";
+            continue;
+        }
         
         // Creating a shared_ptr pointing to a new Workout object
         shared_ptr<workout> workoutPtr = make_shared<workout>(activities[i], durations[i]);
