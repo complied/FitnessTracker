@@ -65,13 +65,19 @@ v - 0.4 --
     + Loops and Loops now! 
     + added extra Cin command cin.get(); & cin.fail();
 
-v - 0.5 -- 
+v - 0.5.5 -- 
 
 + Implemented AssignWorkoutDay function 
     + - Connects with workoutLogger by accessing the existing global arrays (activities, durations, and workoutCount).
         - Passes these arrays as parameters into assignWorkoutToDay()
-    - Goes through the workouts, creates shared pointers, and assigns them to days inside a map<string, vector<shared_ptr<workout>>>.
-
+        - Goes through the workouts, creates shared pointers, and assigns them to days inside a map<string, vector<shared_ptr<workout>>>.
+        - Added 5 times a week limitations for reccomendations. 
+        
+    + White space bug fixed
+        - Missing break statement in main , Case 4 fixed. 
+        - cin.ignore() being called before every getline() caused white space/enter issue - > next workout being skipped. 
+        - Replaced it with cin.ignore() every time workoutcount == 0. 
+        - Refrance - [Before](https://imgur.com/a/4EvP0jg) VS [After](https://imgur.com/a/vvwaKLP)
 
 
 
