@@ -27,9 +27,12 @@ void logWorkout(string activities[], double durations[], int &workoutCount) {
         cout << setfill(' ') << setw(10) << "" << "Please Enter your workout activity: " << endl;
         cout << setfill(' ') << setw(10) << "" << setfill('-') << setw(5) << "" << "> ";
         
-        // Clears leftover input before using getline() to prevent skipping issues
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        // Clears leftover input only once when first workout is being logged to prevent skipping issues
+        if (workoutCount == 0) {
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // had a white space bug fixed 
+        }
         getline(cin, activities[workoutCount]); // Store activity name
+
         
         cout << setfill(' ') << setw(10) << "" << setfill('=') << setw(40) << "" << endl;
         cout << setfill(' ') << setw(10) << "" << "Please Enter your duration in minutes: " << endl;
