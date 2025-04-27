@@ -47,6 +47,7 @@ int main(int argc, const char * argv[]) {
                 break;
             case 4:
                 workoutManager::assignWorkoutToDay(logWorkout::activities, logWorkout::durations, logWorkout::workoutCount); // connected both - logged workout to workout manager
+                break; 
             case 5:
                 cout << "Exiting program. Thank you for using the fitness tracker!" << endl;
                 return 0;
