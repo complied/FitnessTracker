@@ -1,5 +1,0 @@
-if(EXISTS "/Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug/TestingV1Tests[1]_tests.cmake")
-  include("/Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug/TestingV1Tests[1]_tests.cmake")
-else()
-  add_test(TestingV1Tests_NOT_BUILT TestingV1Tests_NOT_BUILT)
-endif()
