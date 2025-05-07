@@ -26,6 +26,7 @@ jobs:
             -Dgtest_force_shared_crt=ON \
             -DCMAKE_USE_PTHREADS_INIT=OFF \
             -DGTEST_HAS_PTHREAD=OFF
+        shell: bash
 
       - name: Build project
         run: cmake --build build
