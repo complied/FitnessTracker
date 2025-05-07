@@ -1,34 +1,48 @@
 name: Cross-Platform CMake Build and Test
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.cpp'
+      - '**.h'
+      - '**.hpp'
+      - 'CMakeLists.txt'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.cpp'
+      - '**.h'
+      - '**.hpp'
+      - 'CMakeLists.txt'
 
 jobs:
-  build:
-    name: ${{ matrix.os }} Build
+  build-and-test:
+    name: Build and Test on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
-      - name: Checkout repository with submodules
+      - name: Checkout Repository with Submodules
         uses: actions/checkout@v3
         with:
           submodules: recursive
+
+      - name: Set up CMake
+        run: cmake --version
 
       - name: Install dependencies (Ubuntu only)
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y cmake g++ build-essential
 
-      - name: Configure CMake
-        run: |
-          cmake -S . -B build \
-            -Dgtest_force_shared_crt=ON \
-            -DCMAKE_USE_PTHREADS_INIT=OFF \
-            -DGTEST_HAS_PTHREAD=OFF
+      - name: Configure with CMake
+        run: cmake -S . -B build -Dgtest_force_shared_crt=ON -DGTEST_HAS_PTHREAD=OFF
 
-      - name: Build project
+      - name: Build with CMake
         run: cmake --build build
 
-      - name: Run tests
-        run: ctest --test-dir build
+      - name: Run Tests
+        run: ctest --test-dir build --output-on-failure
