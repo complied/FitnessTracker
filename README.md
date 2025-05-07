@@ -1,4 +1,6 @@
-Fitness Tracker
+# FitnessTracker
+
+![Build Status](https://github.com/complied/FitnessTracker/actions/workflows/cmake.yml/badge.svg?branch=project1-tests)
 
 # Overview
 A simple C++ program that helps users log workouts, get workout recommendations, and calculate calories burned based on activity type.
