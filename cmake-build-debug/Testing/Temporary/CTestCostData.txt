@@ -1,0 +1,7 @@
+FitnessTests 1 0.588506
+CalorieFunctionTest.BikingCalculationWorks 1 0.00334292
+CalorieFunctionTest.InvalidWorkoutTypeReturnsZero 1 0.00310896
+CalorieFunctionTest.RunningCalculationAccurate 1 0.00317654
+ControlFlowTest.LogWorkoutMaxLimitPreventsLogging 1 0.003558
+EdgeCaseTest.ZeroOrNegativeInputReturnsZero 1 0.00457679
+---

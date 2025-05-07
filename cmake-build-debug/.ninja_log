@@ -1,0 +1,24 @@
+# ninja log v6
+441	835	1746582162746312772	CMakeFiles/TestingHw.dir/src/workoutReccomendation.cpp.o	23943a21300f0f69
+437	812	1746582162742468330	CMakeFiles/TestingHw.dir/src/workoutLogger.cpp.o	29b04cb5f2f5eb12
+835	873	1746582163139761752	TestingHw	29c6bdc2482f882c
+1712	1727	1746582164017136782	lib/libgtest_main.a	9cfaddc985452b2d
+451	481	1746582262472210636	TestingV1Tests	99ae6591375d3612
+1	49	1746582390228385784	build.ninja	d73f09405944abae
+5	437	1746582162309730935	CMakeFiles/TestingHw.dir/src/calorieChecker.cpp.o	844b15b35ba288c9
+5	450	1746582262026467505	CMakeFiles/TestingV1Tests.dir/test/testingV1.cpp.o	8e4f23bb8795c968
+6	446	1746582162310964138	CMakeFiles/TestingHw.dir/src/DisplayMenu.cpp.o	312163d8d19de60b
+1732	1750	1746582164036848031	lib/libgmock_main.a	b016b530ee20077f
+3	240	1746582210679283728	CMakeFiles/TestingV1Tests.dir/src/calorieChecker.cpp.o	aa309c662fae9085
+4	441	1746582162309049855	CMakeFiles/TestingHw.dir/main.cpp.o	9ea3aa7082cc1c01
+681	1057	1746582162986609742	CMakeFiles/TestingV1Tests.dir/src/workoutLogger.cpp.o	6478380b865a8daa
+3	1179	1746582162307802569	extern/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	98440add6c77e5e4
+3	681	1746582162307924318	extern/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	cd51a0b93d3b0fce
+812	1414	1746582163117056557	extern/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	ddbc6ded31fdef40
+1712	1732	1746582164016995949	lib/libgmock.a	6bbfaf2ac4ac8d5f
+2	1680	1746582162307566611	extern/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	6de1096d1d16c66b
+1680	1712	1746582163985165711	lib/libgtest.a	9e66b32d01f6990f
+2	67	1746582390228385784	build.ninja	d73f09405944abae
+3	624	1746582390858169626	TestingV1Tests	368dde9b9e67ddad
+3	624	1746582390858169626	TestingV1Tests[1]_tests.cmake	368dde9b9e67ddad
+3	624	1746582390858169626	/Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug/TestingV1Tests[1]_tests.cmake	368dde9b9e67ddad
