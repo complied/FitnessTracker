@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <limits>
 #include "calorieChecker.h"
 
 using namespace std;
