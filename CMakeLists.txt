@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 # Include Project Headers
 include_directories(include)
 
-#  Main App Executable
+# Main App Executable
 add_executable(TestingHw
         main.cpp
         src/calorieChecker.cpp
@@ -15,12 +15,20 @@ add_executable(TestingHw
         src/workoutReccomendation.cpp
 )
 
-
 enable_testing()
 
-# GoogleTest from Submodule
-add_subdirectory(extern/googletest)
+# GoogleTest configuration
+option(BUILD_GMOCK "Build GMock" OFF)
+option(INSTALL_GTEST "Install GTest" OFF)
 
+# Windows-specific settings
+if(WIN32)
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+    add_definitions(-DGTEST_HAS_PTHREAD=0)
+endif()
+
+# GoogleTest from Submodule
+add_subdirectory(extern/googletest EXCLUDE_FROM_ALL)
 
 add_executable(TestingV1Tests
         test/testingV1.cpp
@@ -31,9 +39,13 @@ add_executable(TestingV1Tests
 target_link_libraries(TestingV1Tests
         gtest
         gtest_main
-        pthread
 )
 
+# Only link pthread on non-Windows platforms
+if(NOT WIN32)
+    find_package(Threads REQUIRED)
+    target_link_libraries(TestingV1Tests Threads::Threads)
+endif()
 
 include(GoogleTest)
 gtest_discover_tests(TestingV1Tests)
