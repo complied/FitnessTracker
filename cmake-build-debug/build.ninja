@@ -140,7 +140,7 @@ build CMakeFiles/TestingV1Tests.dir/src/calorieChecker.cpp.o: CXX_COMPILER__Test
 
 build TestingV1Tests TestingV1Tests[1]_tests.cmake | ${cmake_ninja_workdir}TestingV1Tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__TestingV1Tests_Debug CMakeFiles/TestingV1Tests.dir/test/testingV1.cpp.o CMakeFiles/TestingV1Tests.dir/src/workoutLogger.cpp.o CMakeFiles/TestingV1Tests.dir/src/calorieChecker.cpp.o | lib/libgtest.a lib/libgtest_main.a || lib/libgtest.a lib/libgtest_main.a
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
-  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  -lpthread
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a
   OBJECT_DIR = CMakeFiles/TestingV1Tests.dir
   POST_BUILD = cd /Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -D TEST_TARGET=TestingV1Tests -D TEST_EXECUTABLE=/Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug/TestingV1Tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=TestingV1Tests_TESTS -D CTEST_FILE=/Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug/TestingV1Tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.31/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
@@ -630,7 +630,7 @@ build libgtest_main.a: phony lib/libgtest_main.a
 #############################################
 # Folder: /Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug
 
-build codegen: phony extern/googletest/codegen
+build codegen: phony
 
 # =============================================================================
 
@@ -658,7 +658,7 @@ build extern/googletest/googletest/codegen: phony
 #############################################
 # Folder: /Users/subigyaparajuli/Desktop/TestingHw/cmake-build-debug
 
-build all: phony TestingHw TestingV1Tests extern/googletest/all
+build all: phony TestingHw TestingV1Tests
 
 # =============================================================================
 

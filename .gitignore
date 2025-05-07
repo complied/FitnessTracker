@@ -46,3 +46,13 @@ Pods/
 # macOS system files
 .DS_Store
 
+cmake-build-debug/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.user
+*.o
+*.obj
+*.log
+*.bin
