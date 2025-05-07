@@ -22,7 +22,10 @@ jobs:
 
       - name: Configure CMake
         run: |
-          cmake -S . -B build -Dgtest_force_shared_crt=ON -DCMAKE_USE_PTHREADS_INIT=OFF
+          cmake -S . -B build \
+            -Dgtest_force_shared_crt=ON \
+            -DCMAKE_USE_PTHREADS_INIT=OFF \
+            -DGTEST_HAS_PTHREAD=OFF
 
       - name: Build project
         run: cmake --build build
