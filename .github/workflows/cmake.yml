@@ -21,12 +21,12 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y cmake g++ build-essential
 
       - name: Configure CMake
+        shell: bash
         run: |
           cmake -S . -B build \
             -Dgtest_force_shared_crt=ON \
             -DCMAKE_USE_PTHREADS_INIT=OFF \
-            -DGTEST_HAS_PTHREAD=OFF
-        shell: bash
+            -DGTEST_HAS_PTHREAD=0
 
       - name: Build project
         run: cmake --build build
