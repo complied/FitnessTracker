@@ -34,7 +34,7 @@ void calorieChecker() {
 
         if (cin.fail() || weight <= 0) {
             cin.clear(); // Clears the error flags
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input - just how learned in class
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input - just how learned in class
             cout << setfill(' ') << setw(10) << "" << "Invalid input. Please enter a valid weight." << endl;
         } else {
             break;
@@ -49,7 +49,7 @@ void calorieChecker() {
 
         if (cin.fail() || time <= 0) { // another error checker!
             cin.clear(); // Clear error flag
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input - just how learned in class
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard invalid input - just how learned in class
             cout << setfill(' ') << setw(10) << "" << "Invalid input. Please enter a valid duration." << endl;
         } else {
             break;
